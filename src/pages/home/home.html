@@ -12,18 +12,19 @@
 <ion-content>
    <ion-list>
      <ion-item *ngIf="materias.length == 0"> 
-       Empty
+       No existen registros de materias
      </ion-item>
-    <ion-item-sliding *ngFor="let materia of materias; let i = index">
+
+
+    <ion-item-sliding *ngFor="let materia of materias; let i = index ">
       <ion-item >
         <ion-label>{{ materia.title }}</ion-label>
-      </ion-item>
-      <ion-item-options side="right" icon-left>
-        <button ion-button color="danger" >
-          <ion-icon name="trash"></ion-icon>
+        <button ion-button item-right color="danger" (click)="deleteMateria(materia, i)" >
+          <ion-icon name="trash" ></ion-icon>
           Delete
         </button>
-      </ion-item-options>
+      </ion-item>
+        
     </ion-item-sliding>
   </ion-list>
 </ion-content>

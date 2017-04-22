@@ -68,5 +68,16 @@ export class HomePage {
     alert.present();
   }
 
+  deleteMateria(materia: any, index){
+        this.materiasService.delete(materia)
+        .then(response =>{ 
+            this.materias.splice(index, 1)
+        })
+        .catch(error =>{
+          console.error(error)
+        });
+    }
 
 }
+
+

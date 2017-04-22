@@ -21,11 +21,12 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      materiasService.openDatabase()
+     materiasService.openDatabase()
       .then(() => this.materiasService.createTable())
       .then(()=>{
         this.rootPage = TabsPage;
       })
+
     });
   }
 }
