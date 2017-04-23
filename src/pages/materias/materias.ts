@@ -40,7 +40,7 @@ export class MateriasPage {
       message: 'escribe el nombre de la materia',
       inputs: [
         {
-          name: 'title',
+          name: 'descripcion',
           placeholder: 'Digitar nueva materia.',
         }
       ],
