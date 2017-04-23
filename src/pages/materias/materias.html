@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>materias</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="openAlertNewMateria()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+   <ion-list>
+     <ion-item *ngIf="materias.length == 0"> 
+       No existen registros de materias
+     </ion-item>
+
+
+    <ion-item-sliding *ngFor="let materia of materias; let i = index ">
+      <ion-item >
+        <ion-label>{{ materia.title }}</ion-label>
+        <button ion-button item-right color="danger" (click)="deleteMateria(materia, i)" >
+          <ion-icon name="trash" ></ion-icon>
+          Delete
+        </button>
+      </ion-item>
+        
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

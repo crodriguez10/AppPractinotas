@@ -16,6 +16,7 @@ export class MateriasService {
 	constructor(){
 		this.db = new SQLite();
 		console.log("instanciar db");
+		this.openDatabase();
 	}
 	
 	openDatabase(){
@@ -49,6 +50,7 @@ export class MateriasService {
 	}
 
 	create(materia: any){
+		console.log("crear registro");
 	  let sql = 'INSERT INTO materias(descripcion, estado_materia) VALUES(?,?)';
 	  return this.dbo.executeSql(sql, [materia.descripcion, materia.estado_materia]);
 	}

@@ -1,30 +1,18 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <ion-title>materias</ion-title>
-    <ion-buttons right>
-      <button ion-button icon-only (click)="openAlertNewMateria()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-   <ion-list>
-     <ion-item *ngIf="materias.length == 0"> 
-       No existen registros de materias
-     </ion-item>
+<ion-content padding>
+  <h3>Ionic Menu Starter</h3>
 
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+  </p>
 
-    <ion-item-sliding *ngFor="let materia of materias; let i = index ">
-      <ion-item >
-        <ion-label>{{ materia.title }}</ion-label>
-        <button ion-button item-right color="danger" (click)="deleteMateria(materia, i)" >
-          <ion-icon name="trash" ></ion-icon>
-          Delete
-        </button>
-      </ion-item>
-        
-    </ion-item-sliding>
-  </ion-list>
+  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>
