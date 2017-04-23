@@ -19,7 +19,7 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,
-  public materiasService: MateriasService
+    public materiasService: MateriasService
   ) {
     this.initializeApp();
 
@@ -37,6 +37,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.materiasService.createTable();
       
     });
   }
